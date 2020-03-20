@@ -1,14 +1,17 @@
 import React from "react";
 
 const QuestionRow = (props) => {
-    const {category, type, difficulty, question} = {...props.questionData};
+    const {category, difficulty} = {...props.questionData};
+    const type = props.questionData.type === "multiple" ? "Multiple Choice" : "True / False";
+    const parser = new DOMParser();
+    const formattedQuestion = parser.parseFromString(props.questionData.question, "text/html").body.innerHTML;
     return (
         <tr>
             <td>{Math.floor(Math.random() * 100)}</td>
             <td>{category}</td>
             <td>{type}</td>
             <td>{difficulty}</td>
-            <td>{question}</td>
+            <td>{formattedQuestion}</td>
             <td>arthur</td>
         </tr>
     )

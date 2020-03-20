@@ -13,6 +13,28 @@ class QuestionsTable extends React.Component {
         .then(response => this.setState({ questions: response.data.results }))
         .catch(err => console.log(err))
     }
+
+    // formatData = (data) => {
+    //     const newDataArr = [];
+    //     for(let i = 0; i < data.length; i++) {
+    //         const formattedQuestion = this.htmlDecode(data[i].question);
+    //         const {category, type, difficulty} = {...data[i]};
+    //         const newObj = {
+    //             category: category,
+    //             type: type,
+    //             difficulty: difficulty,
+    //             question: formattedQuestion
+    //         }
+    //         newDataArr.push(newObj);
+    //     }
+    //     return newDataArr;
+    // }
+
+    // htmlDecode = (input) => {
+    //     const divEl = document.createElement('div');
+    //     divEl.innerHTML = input;
+    //     return divEl.childNodes.length === 0 ? "" : divEl.childNodes[0].nodeValue;
+    // }
     
     render() {
         console.log(this.state);
