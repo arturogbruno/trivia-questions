@@ -1,4 +1,5 @@
 import React from "react";
+import faker from "faker";
 
 const QuestionRow = (props) => {
     const {category, difficulty} = {...props.questionData};
@@ -12,7 +13,7 @@ const QuestionRow = (props) => {
             <td>{type}</td>
             <td>{difficulty}</td>
             <td>{formattedQuestion}</td>
-            <td>arthur</td>
+            <td>{faker.internet.userName()}</td>
         </tr>
     )
 }
