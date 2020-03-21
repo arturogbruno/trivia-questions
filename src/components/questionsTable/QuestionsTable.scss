@@ -23,6 +23,7 @@
     th {
         background-color: rgb(43, 44, 45);
         font-weight: 800;
+        text-align: left;
     }
 
     td {
@@ -37,9 +38,17 @@
             color: rgb(99, 215, 167);
         }
     }
+
+    .category {
+        width: 200px;
+    }
+
+    .type {
+        width: 115px;
+    }
 }
 
 .loading {
     text-align: center;
-    color: rgb(196, 196, 196);
+    color: rgb(216, 216, 216);
 }
