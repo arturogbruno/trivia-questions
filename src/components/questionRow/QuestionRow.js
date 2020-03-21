@@ -1,5 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import faker from "faker";
+import "./QuestionRow.scss";
 
 const QuestionRow = (props) => {
     const {category, difficulty} = {...props.questionData};
@@ -13,7 +15,7 @@ const QuestionRow = (props) => {
             <td>{type}</td>
             <td>{difficulty}</td>
             <td>{formattedQuestion}</td>
-            <td>{faker.internet.userName()}</td>
+            <td><Link to="#" className="author">{faker.internet.userName()}</Link></td>
         </tr>
     )
 }

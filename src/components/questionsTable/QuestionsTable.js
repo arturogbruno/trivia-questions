@@ -1,11 +1,12 @@
 import React from "react";
-import QuestionRow from "../questionRow/QuestionRow";
 import axios from "axios";
+import QuestionRow from "../questionRow/QuestionRow";
+import "./QuestionsTable.scss";
 
 
 class QuestionsTable extends React.Component {
     state = {
-        questions: null
+        questions: null,
     }
 
     componentDidMount = () => {
@@ -15,14 +16,15 @@ class QuestionsTable extends React.Component {
     }
 
     render() {
+        console.log(this.state);
         return (
             this.state.questions ? (
                 <div className="main">
-                    <h1>Browse Questions</h1>
-                    <table>
+                    <h1 className="title">Browse Questions</h1>
+                    <table className="table">
                         <thead>
                             <tr>
-                                <th>ID</th>
+                                <th className="id">ID<i className="fas fa-sort"></i></th>
                                 <th>Category</th>
                                 <th>Type</th>
                                 <th>Difficulty</th>
@@ -36,7 +38,7 @@ class QuestionsTable extends React.Component {
                     </table>
                 </div>
             ) : (
-                <h3>Cargando...</h3>
+                <h3 className="loading">Loading data...</h3>
             )
         )
     }

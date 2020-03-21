@@ -1,0 +1,45 @@
+.main {
+    width: 75%;
+    margin: 0 auto;
+}
+
+.title {
+    font-family: 'Source Sans Pro', sans-serif;
+    margin-bottom: 12px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+
+    th, td {
+        background-color: rgb(28, 28, 28);
+        border: 1px solid rgb(55, 56, 57);
+        padding: 5px;
+    }
+
+    th {
+        background-color: rgb(43, 44, 45);
+        font-weight: 800;
+    }
+
+    td {
+        font-weight: 600;
+    }
+
+    .id {
+        width: 30px;
+
+        i {
+            margin-left: 3px;
+            color: rgb(99, 215, 167);
+        }
+    }
+}
+
+.loading {
+    text-align: center;
+    color: rgb(196, 196, 196);
+}
