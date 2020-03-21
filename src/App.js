@@ -1,13 +1,13 @@
 import React from "react";
 import Navbar from "./components/navbar/Navbar";
-import QuestionsTable from "./components/questionsTable/QuestionsTable";
+import BrowsePage from "./components/browsePage/BrowsePage";
 import "./App.css";
 
 function App() {
     return (
         <div className="App">
             <Navbar />
-            <QuestionsTable />
+            <BrowsePage />
         </div>
     )
 }

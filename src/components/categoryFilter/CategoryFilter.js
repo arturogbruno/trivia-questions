@@ -1,16 +1,17 @@
 import React from "react";
+import "./CategoryFilter.scss";
 
 const CategoryFilter = (props) => {
     return (
-        <form>
-            <label>Categories:</label>
+        <div className="categoryFilter">
+            <h4><i className="fas fa-filter"></i> Categories:</h4>
             {props.categories.map((category, idx) => (
-                <React.Fragment key={idx}>
+                <div className="filterItem" key={idx}>
                     <input type="checkbox" name="category" id={category} value={category} onChange={props.handleChange}/>
                     <label htmlFor={category}>{category}</label>
-                </React.Fragment>
+                </div>
             ))}
-        </form>
+        </div>
     )
 }
 

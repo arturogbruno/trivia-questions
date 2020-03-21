@@ -1,14 +1,4 @@
-.main {
-    width: 75%;
-    margin: 0 auto;
-}
-
-.title {
-    font-family: 'Source Sans Pro', sans-serif;
-    margin-bottom: 12px;
-}
-
-.table {
+.questionsTable {
     width: 100%;
     border-collapse: collapse;
     font-family: 'Roboto', sans-serif;
@@ -17,7 +7,7 @@
     th, td {
         background-color: rgb(28, 28, 28);
         border: 1px solid rgb(55, 56, 57);
-        padding: 5px;
+        padding: 7px;
     }
 
     th {
@@ -46,9 +36,4 @@
     .type {
         width: 115px;
     }
-}
-
-.loading {
-    text-align: center;
-    color: rgb(216, 216, 216);
 }

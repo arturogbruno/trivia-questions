@@ -1,0 +1,19 @@
+.categoryFilter {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    font-family: 'Roboto', sans-serif;
+
+    h4 {
+        margin: 5px 0 10px 0;
+    }
+
+    .filterItem {
+        margin-bottom: 5px;
+        margin-left: 20px;
+
+        label {
+            margin-left: 8px;
+        }
+    }
+}
