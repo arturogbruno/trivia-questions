@@ -4,6 +4,7 @@ import faker from "faker";
 import QuestionsTable from "../questionsTable/QuestionsTable";
 import DifficultyFilter from "../difficultyFilter/DifficultyFilter";
 import CategoryFilter from "../categoryFilter/CategoryFilter";
+import Pagination from "../pagination/Pagination";
 import "./BrowsePage.scss";
 
 class BrowsePage extends React.Component {
@@ -62,14 +63,17 @@ class BrowsePage extends React.Component {
         return (
             this.state.questions ? (
                 <div className="browsePage">
-                    <div className="filters">
-                        <DifficultyFilter levels={this.state.difficultyLevels} handleChange={this.handleDifficultyFilter}/>
-                        <CategoryFilter categories={this.state.categories} handleChange={this.handleCategoryFilter}/>
-                    </div>
                     <div className="main">
-                        <h1 className="title">Browse Questions</h1>
-                        <QuestionsTable {...this.state}/>
+                        <div className="filters">
+                            <DifficultyFilter levels={this.state.difficultyLevels} handleChange={this.handleDifficultyFilter}/>
+                            <CategoryFilter categories={this.state.categories} handleChange={this.handleCategoryFilter}/>
+                        </div>
+                        <div className="table">
+                            <h1 className="title">Browse Questions</h1>
+                            <QuestionsTable {...this.state}/>
+                        </div>
                     </div>
+                    <Pagination />
                 </div>
             ) : (
                 <h3 className="loading">Loading data...</h3>

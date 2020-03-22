@@ -7,7 +7,7 @@ const CategoryFilter = (props) => {
             <h4><i className="fas fa-filter"></i> Categories:</h4>
             {props.categories.map((category, idx) => (
                 <div className="filterItem" key={idx}>
-                    <input type="checkbox" name="category" id={category} value={category} onChange={props.handleChange}/>
+                    <input type="checkbox" name="category" id={category} value={category} onChange={e => props.handleChange(e)}/>
                     <label htmlFor={category}>{category}</label>
                 </div>
             ))}
